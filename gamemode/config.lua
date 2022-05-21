@@ -1,8 +1,8 @@
 BASEWARS_CHOSEN_LANGUAGE = "ENGLISH"
 
 BaseWars.Config = {
-	Forums 		= "http://steamcommunity.com/groups/100acrebb/discussions",
-	SteamGroup 	= "http://steamcommunity.com/groups/100acrebb",
+	Forums 		= "https://discord.gg/BdNqcrNwRg",
+	SteamGroup 	= "https://discord.gg/BdNqcrNwRg",
 
 	Ents = {
 		Electronics = {
@@ -402,7 +402,7 @@ local Grey = Color(200, 200, 200)
 
 BaseWars.AdvertTbl = {
 
-	{Grey, "Remember to join our ", NiceGreen, "Steam Group", Grey, "! (/steam)"},
+	{Grey, "Remember to join our ", NiceGreen, "Discord", Grey, "! (/steam)"},
 	{Grey, "You can find out more on the ", NiceGreen, "Forums", Grey, "! (/forums)"},
 
 }
@@ -424,7 +424,7 @@ BaseWars.Config.Help = {
 
 	["What is this server?"] = {
 
-		"This is the Hexahedronic BaseWars server.",
+		"This is the Movies Free Premium BaseWars server.",
 		"It runs a custom version of basewars!",
 		"",
 		"BaseWars is a gamemode about making money and raiding.",
@@ -646,6 +646,7 @@ if CustomizableWeaponry then
 	BaseWars.SpawnList.Models.Loadout["Weapons - T1"] = {
 
 			["Crowbar"] 				= BaseWars.GSL{Gun = true, Model = "models/weapons/w_crowbar.mdl", Price = 1000, ClassName = "weapon_crowbar"},
+			["Keypad Cracker"] 				= BaseWars.GSL{Gun = true, Model = "models/weapons/w_c4.mdl", Price = 2000, ClassName = "keypad_cracker"},
 
 			["USP"] 						= BaseWars.GSL{Gun = true, Model = "models/weapons/w_pist_usp.mdl", Price = 5000, ClassName = "cw_g4p_usp40"},
 			["M1911"] 					= BaseWars.GSL{Gun = true, Model = "models/weapons/w_pist_usp.mdl", Price = 5000, ClassName = "cw_m1911"},
@@ -713,6 +714,7 @@ else
 	BaseWars.SpawnList.Models.Loadout["Weapons - T1"] = {
 
 			["Crowbar"] 				= BaseWars.GSL{Gun = true, Model = "models/weapons/w_crowbar.mdl", Price = 3000, ClassName = "weapon_crowbar"},
+			["Keypad Cracker"] 				= BaseWars.GSL{Gun = true, Model = "models/weapons/w_c4.mdl", Price = 2000, ClassName = "keypad_cracker"},
 
 			["USP"] 						= BaseWars.GSL{Gun = true, Model = "models/weapons/w_pist_usp.mdl", Price = 5000, ClassName = "weapon_twitch_usp"},
 			["Deagle"] 					= BaseWars.GSL{Gun = true, Model = "models/weapons/w_pist_deagle.mdl", Price = 10000, ClassName = "weapon_twitch_deagle"},
