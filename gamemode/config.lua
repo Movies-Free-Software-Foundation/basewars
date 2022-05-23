@@ -84,6 +84,7 @@ BaseWars.Config = {
 	SpawnWeps = {
 		"weapon_physcannon",
 		"hands",
+		"weapon_knife",
 	},
 
 	WeaponDropBlacklist = {
@@ -92,6 +93,7 @@ BaseWars.Config = {
 		["hands"] = true,
 		["gmod_tool"] = true,
 		["gmod_camera"] = true,
+		["weapon_knife"] = true,
 	},
 
 	PhysgunBlockClasses = {
