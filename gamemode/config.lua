@@ -356,7 +356,7 @@ BaseWars.NPCTable = {
 	["rp_evildead_v7_a"] = {
 
 		[1] = {
-			Pos = Vector(3194, -2487, 536),
+			Pos = Vector(3194, -2487, 530),
 			Ang = Angle(4, -179, 0),
 		},
 
