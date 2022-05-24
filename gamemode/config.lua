@@ -12,6 +12,17 @@ BaseWars.Config = {
 		SpawnPoint = {
 			Offset 		= Vector(0, 0, 16),
 		},
+
+		CanDamage = {
+			['npc_zombie'] = true,
+			['npc_zombie_torso'] = true,
+			['npc_fastzombie'] = true,
+			['npc_poisonzombie'] = true,
+			['npc_fastzombie_torso'] = true,
+			['npc_headcrab'] = true,
+			['npc_headcrab_black'] = true,
+			['npc_headcrab_fast'] = true
+		},
 	},
 
 	Drugs = {
@@ -85,6 +96,7 @@ BaseWars.Config = {
 		"weapon_physcannon",
 		"hands",
 		"weapon_knife",
+		"khr_model29"
 	},
 
 	WeaponDropBlacklist = {
@@ -94,6 +106,7 @@ BaseWars.Config = {
 		["gmod_tool"] = true,
 		["gmod_camera"] = true,
 		["weapon_knife"] = true,
+		["khr_model29"] = true
 	},
 
 	PhysgunBlockClasses = {
@@ -356,7 +369,7 @@ BaseWars.NPCTable = {
 	["rp_evildead_v7_a"] = {
 
 		[1] = {
-			Pos = Vector(3194, -2487, 536),
+			Pos = Vector(3194, -2487, 530),
 			Ang = Angle(4, -179, 0),
 		},
 

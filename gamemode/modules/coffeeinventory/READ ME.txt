@@ -1,0 +1,1 @@
+All config variables are placed in lua/autorun/coffeeinventory/core/sh_core.lua

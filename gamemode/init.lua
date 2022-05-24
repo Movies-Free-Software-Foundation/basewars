@@ -236,18 +236,29 @@ function GM:EntityTakeDamage(ent, dmginfo)
 	local Player = BaseWars.Ents:ValidPlayer(ent)
 	local Owner = BaseWars.Ents:ValidOwner(ent)
 
+
 	if not Player and not Owner then
+		if BaseWars.Config.Ents.CanDamage[ent:GetClass()] ~= nil then
+			return false
+		end
 
 		dmginfo:ScaleDamage(0)
 		dmginfo:SetDamage(0)
 
 	return false end
-
-	self.BaseClass:EntityTakeDamage(ent, dmginfo)
-
+	
 	local Inflictor = dmginfo:GetInflictor()
 	local Attacker 	= dmginfo:GetAttacker()
 	local Damage 	= dmginfo:GetDamage()
+	
+	-- This gun is intended only for NPC killing. It's meant to be impractical for fighting players.
+	if Attacker:GetActiveWeapon():GetClass() == 'khr_model29' and Player then
+		dmginfo:ScaleDamage(1)
+		dmginfo:SetDamage(17)
+		return false
+	end
+
+	self.BaseClass:EntityTakeDamage(ent, dmginfo)
 
 	local Scale = 1
 

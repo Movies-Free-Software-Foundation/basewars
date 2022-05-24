@@ -99,11 +99,16 @@ function ENT:ThinkFunc()
 	local find = ents.FindInCone(self.EyePosOffset, Forward, self.Radius, self.Angle)
 	
 	for k, v in next, find do
+
+		local EntClass = v:GetClass()
+		if BaseWars.Config.Ents.CanDamage[EntClass] ~= nil then
+			v:SetHealth(0)
+		end
 	
-		if not BaseWars.Ents:ValidPlayer(v) then continue end
+		if not BaseWars.Ents:ValidPlayer(v) and BaseWars.Config.Ents.CanDamage[EntClass] == nil then continue end
 		
 		local Owner = BaseWars.Ents:ValidOwner(self)
-		if Owner and not Owner:IsEnemy(v) then continue end
+		if Owner and not Owner:IsEnemy(v) and BaseWars.Config.Ents.CanDamage[EntClass] == nil then continue end
 		
 		local Data = {
 			ply = v,
