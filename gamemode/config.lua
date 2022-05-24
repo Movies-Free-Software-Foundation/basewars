@@ -85,6 +85,7 @@ BaseWars.Config = {
 		"weapon_physcannon",
 		"hands",
 		"weapon_knife",
+		"khr_model29"
 	},
 
 	WeaponDropBlacklist = {
@@ -94,6 +95,7 @@ BaseWars.Config = {
 		["gmod_tool"] = true,
 		["gmod_camera"] = true,
 		["weapon_knife"] = true,
+		["khr_model29"] = true
 	},
 
 	PhysgunBlockClasses = {
