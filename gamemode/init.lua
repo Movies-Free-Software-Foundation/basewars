@@ -249,7 +249,7 @@ function GM:EntityTakeDamage(ent, dmginfo)
 
 	if not Player and not Owner then
 		if CanDamage[ent:GetClass()] ~= nil then
-			return true
+			return false
 		end
 
 		dmginfo:ScaleDamage(0)
