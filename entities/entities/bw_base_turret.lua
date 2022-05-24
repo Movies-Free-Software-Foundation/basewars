@@ -101,6 +101,9 @@ function ENT:ThinkFunc()
 	for k, v in next, find do
 
 		local EntClass = v:GetClass()
+		if BaseWars.Config.Ents.CanDamage[EntClass] ~= nil then
+			v:SetHealth(0)
+		end
 	
 		if not BaseWars.Ents:ValidPlayer(v) and BaseWars.Config.Ents.CanDamage[EntClass] == nil then continue end
 		
