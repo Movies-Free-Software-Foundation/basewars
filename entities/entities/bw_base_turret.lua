@@ -49,7 +49,7 @@ function ENT:SpawnBullet(target)
 		tr.endpos = Pos
 		tr.filter = function(ent)
 			
-			if ent:IsPlayer() or ent:GetClass():find("prop_") then return true end
+			if ent:IsPlayer() or ent:GetClass():find("prop_") or BaseWars.Config.Ents.CanDamage[ent:GetClass()] ~= nil then return true end
 			
 		end
 	tr = util.TraceLine(tr)
