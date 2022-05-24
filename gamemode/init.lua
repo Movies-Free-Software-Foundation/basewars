@@ -236,19 +236,9 @@ function GM:EntityTakeDamage(ent, dmginfo)
 	local Player = BaseWars.Ents:ValidPlayer(ent)
 	local Owner = BaseWars.Ents:ValidOwner(ent)
 
-	local CanDamage = {
-		['npc_zombie'] = true,
-		['npc_zombie_torso'] = true,
-		['npc_fastzombie'] = true,
-		['npc_poisonzombie'] = true,
-		['npc_fastzombie_torso'] = true,
-		['npc_headcrab'] = true,
-		['npc_headcrab_black'] = true,
-		['npc_headcrab_fast'] = true
-	}
 
 	if not Player and not Owner then
-		if CanDamage[ent:GetClass()] ~= nil then
+		if BaseWars.Config.Ents.CanDamage[ent:GetClass()] ~= nil then
 			return false
 		end
 

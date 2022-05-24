@@ -12,6 +12,17 @@ BaseWars.Config = {
 		SpawnPoint = {
 			Offset 		= Vector(0, 0, 16),
 		},
+
+		CanDamage = {
+			['npc_zombie'] = true,
+			['npc_zombie_torso'] = true,
+			['npc_fastzombie'] = true,
+			['npc_poisonzombie'] = true,
+			['npc_fastzombie_torso'] = true,
+			['npc_headcrab'] = true,
+			['npc_headcrab_black'] = true,
+			['npc_headcrab_fast'] = true
+		},
 	},
 
 	Drugs = {
